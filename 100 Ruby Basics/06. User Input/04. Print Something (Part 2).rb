@@ -29,18 +29,20 @@
 # >> Do you want me to print something? (y/n)
 # n
 
-input = ""
+# input = ""
 
-until input == "y" || input == "n"
-  puts ">> Do you want me to print something? (y/n)"
-  input = gets.chomp.downcase
-  if input == "y"
-    puts "something"
-  elsif input == "n"
-    puts "Fine. I won't"
-  end
-  puts "That wasn't a valid response. Please enter either 'y' or 'n'."
-end
+# until input == "y" || input == "n"
+#   puts ">> Do you want me to print something? (y/n)"
+#   input = gets.chomp.downcase
+#   if input == "y"
+#     puts "something"
+#     break
+#   elsif input == "n"
+#     puts "Fine. I won't"
+#     break
+#   end
+#   puts "That wasn't a valid response. Please enter either 'y' or 'n'."
+# end
 
 
 
@@ -49,13 +51,21 @@ end
 
 
 # Solution
-# choice = nil
-# loop do
-#   puts '>> Do you want me to print something? (y/n)'
-#   choice = gets.chomp.downcase
-#   break if %w(y n).include?(choice)
-#   puts '>> Invalid input! Please enter y or n'
-# end
+
+choice = nil
+loop do
+  puts '>> Do you want me to print something? (y/n)'
+  choice = gets.chomp.downcase
+  break if %w(y n).include?(choice)
+  puts '>> Invalid input! Please enter y or n'
+end
+if choice == 'y'
+  puts 'something'
+elsif choice == 'n'
+  puts "Fine. I won't"
+end
+
+
 # puts 'something' if choice == 'y'
 # Discussion
 # The solution to this exercise will become a familiar pattern early during your Launch School learning. We use a plain loop to solicit inputs until we have a valid input, then exit that loop.
