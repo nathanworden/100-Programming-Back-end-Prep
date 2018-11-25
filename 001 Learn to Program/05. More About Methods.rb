@@ -187,13 +187,17 @@ puts " "
 # --> text <--                --> text <--
 # A Few Things to Try
 # Write an Angry Boss program. It should rudely ask what you want. Whatever you answer, the Angry Boss should yell it back to you, and then fire you. For example, if you type in I want a raise., it should yell back WHADDAYA MEAN "I WANT A RAISE."?!?  YOU'RE FIRED!!
-# So here's something for you to do in order to play around more with  center, ljust, and rjust: Write a program which will display a Table of Contents so that it looks like this:
+
+# So here's something for you to do in order to play around 
+# more with  center, ljust, and rjust: Write a program which 
+# will display a Table of Contents so that it looks like this:
 
 #                 Table of Contents                
                                                  
 # Chapter 1:  Numbers                        page 1
 # Chapter 2:  Letters                       page 72
 # Chapter 3:  Variables                    page 118
+
 # Higher Math
 # (This section is totally optional. It assumes a fair degree of mathematical knowledge. If you aren't interested, you can go straight to Flow Control without any problems. However, a quick look at the section on Random Numbers might come in handy.)
 

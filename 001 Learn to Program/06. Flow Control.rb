@@ -310,41 +310,43 @@
 # Hint 2: Try to think about what parts of your program should happen over and over again. All of those should be in your while loop.
 
 
-puts "Hi, my name is Granny. How was your day today?"
-answer = gets.chomp
+# puts "Hi, my name is Granny. How was your day today?"
+# answer = gets.chomp
 
-while true
+# while true
 
-until answer =='BYE'
+# until answer =='BYE'
 
-  while answer != answer.upcase
-    puts "HUH?! SPEAK UP, SONNY!"
-    answer = gets.chomp
-  end
-  puts "NO, NOT SINCE #{rand(1930..1950)}"
-  answer = gets.chomp
-end
+#   while answer != answer.upcase
+#     puts "HUH?! SPEAK UP, SONNY!"
+#     answer = gets.chomp
+#   end
+#   if answer == 'BYE'
+#     next
+#   end
+#   puts "NO, NOT SINCE #{rand(1930..1950)}"
+#   answer = gets.chomp
+# end
 
-
-  if answer == 'BYE'
-    puts "* Granny can't hear you. Try saying BYE again *"
-    second_answer == gets.chomp
-    if second_answer == 'BYE'
-      puts "* Granny STILL can't hear you. Try saying BYE one more time *"
-      third_answer == gets.chomp
-      if third_answer == 'BYE'
-        puts "Bye, sonny, it was nice talking to you!"
-        return
-      else
-        next
-      end
-    else
-      next
-    end
-  else
-    next
-  end
-end
+#   if answer == 'BYE'
+#     puts "* Granny can't hear you. Try saying BYE again *"
+#     answer = gets.chomp
+#     if answer == 'BYE'
+#       puts "* Granny STILL can't hear you. Try saying BYE one more time *"
+#       answer = gets.chomp
+#       if answer == 'BYE'
+#         puts "Bye, sonny, it was nice talking to you!"
+#         return
+#       else
+#         next
+#       end
+#     else
+#       next
+#     end
+#   else
+#     next
+#   end
+# end
 
 
 
@@ -362,8 +364,36 @@ end
 
 # Leap Years. Write a program which will ask for a starting
 # year and an ending year, and then puts all of the leap years
-# etween them (and including them, if they are also leap years). Leap years are years divisible by four (like 1984 and 2004). However, years divisible by 100 are not leap years (such as 1800 and 1900) unless they are divisible by 400 (like 1600 and 2000, which were in fact leap years). (Yes, it's all pretty confusing, but not as confusing as having July in the middle of the winter, which is what would eventually happen.)
-# # When you finish those, take a break! You've learned a lot
+# between them (and including them, if they are also leap years).
+# Leap years are years divisible by four (like 1984 and 2004). 
+# However, years divisible by 100 are not leap years (such as 
+# 1800 and 1900) unless they are divisible by 400 (like 1600 
+# and 2000, which were in fact leap years). (Yes, it's all 
+# pretty confusing, but not as confusing as having July in the 
+# middle of the winter, which is what would eventually happen.)
+
+
+puts "Give me a start year: "
+start_year = gets.chomp.to_i
+puts "Give me an end year: "
+end_year = gets.chomp.to_i
+
+puts
+
+all_years =  (start_year..end_year).to_a
+
+leap_years = all_years.select do |year|
+                year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)
+                end
+
+puts "Here is every leap year between #{start_year} and \
+#{end_year}: #{leap_years}"
+
+puts
+
+
+
+# When you finish those, take a break! You've learned a lot
 # already. Congratulations! Are you surprised at the number
 # of things you can tell a computer to do? A few more 
 # chapters and you'll be able to program just about
@@ -371,6 +401,9 @@ end
 # can do now that you couldn't do without looping and
 # branching.
 
+
 # # Now let's learn about a new kind of object, one which 
 # keeps track of lists of other objects: arrays.
+
+
 
