@@ -165,33 +165,36 @@
 # puts "Type as many words as you want. One word per line. \
 # Once you are done, leave a line blank and hit enter "
 
-# array = []
-# input = nil
+puts "Type as many words as you want. One word per line. \
+Once you are done, leave a line blank and hit enter "
 
-# until input == ""
-#   input = gets.chomp
-#   array << input
-# end
+array = []
+input = nil
 
-# def bubble_sort(array)
-#   n = array.length
-#   loop do
-#     swapped = false
-#     (n-1).times do |i|
-#       if array[i] > array[i + 1]
-#         array[i], array[i+1] = array[i+1], array[i]
-#         swapped = true
-#       end
-#     end
-#     break if not swapped
-#   end
-#   array
-# end
+until input == ""
+  input = gets.chomp
+  array << input
+end
+
+def bubble_sort(array)
+  n = array.length
+  loop do
+    swapped = false
+    (n-1).times do |i|
+      if array[i] > array[i + 1]
+        array[i], array[i+1] = array[i+1], array[i]
+        swapped = true
+      end
+    end
+    break if not swapped
+  end
+  array
+end
 
 
-# bubble_sort(array)
+bubble_sort(array)
 
-# p array
+p array
 
 
 
@@ -204,20 +207,20 @@
 # the array in a beautifully formatted Table of Contents.
 
 
-table_of_contents = ["Table of Contents", "Chapter 1: Numbers", "Chapter 2: Letters", "Chapter 3: Variables", "page 1", "page 72", "page 118"]
+# table_of_contents = ["Table of Contents", "Chapter 1: Numbers", "Chapter 2: Letters", "Chapter 3: Variables", "page 1", "page 72", "page 118"]
 
 
 
-puts
-puts table_of_contents[0].center(75)
-puts
-print table_of_contents[1].ljust(10)
-puts table_of_contents[2].rjust(50)
-print "Chapter 2:  Letters".ljust(10)
-puts "page 72".rjust(51)
-print "Chapter 3:  Variables".ljust(10)
-puts "page 118".rjust(50)
-puts
+# puts
+# puts table_of_contents[0].center(75)
+# puts
+# print table_of_contents[1].ljust(10)
+# puts table_of_contents[4].rjust(50)
+# print table_of_contents[2].ljust(10)
+# puts table_of_contents[5].rjust(51)
+# print table_of_contents[3].ljust(10)
+# puts table_of_contents[6].rjust(50)
+# puts
 
 
 
