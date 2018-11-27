@@ -697,3 +697,6 @@ p englishNumber(number)
 # Congratulations! At this point, you are a true programmer! You have learned everything you need to build huge programs from scratch. If you have ideas for programs you would like to write for yourself, give them a shot!
 
 # Of course, building everything from scratch can be a pretty slow process. Why spend time writing code that someone else already wrote? Would you like your program to send some email? Would you like to save and load files on your computer? How about generating web pages for a tutorial where the code samples are all automatically tested? ;) Ruby has many different kinds of objects we can use to help us write better programs faster.
+
+
+
